@@ -1,0 +1,275 @@
+/* Global Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: #f5f5f5;
+  color: #333;
+  padding: 1rem;
+}
+
+/* Navigation */
+header {
+  background-color: #004080;
+  color: white;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Section Styles */
+section {
+  margin: 2rem auto;
+  padding: 1rem;
+  max-width: 960px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  margin-bottom: 1rem;
+  color: #004080;
+}
+
+/* About Me Section */
+#about-me p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+/* Projects Section */
+#projects {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+#projects article {
+  display: flex;
+  flex-direction: column;
+  background-color: #f0f8ff;
+  padding: 1rem;
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+#projects img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+}
+
+#projects figcaption {
+  font-style: italic;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Skills Section */
+#skills ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+}
+
+#skills li {
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+#skills li::before {
+  content: "✔️";
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+/* Contact Form */
+#contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+#contact label {
+  font-weight: bold;
+}
+
+#contact input,
+#contact textarea {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+#contact button {
+  background-color: #004080;
+  color: white;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+#contact button:hover {
+  background-color: #0059b3;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 3rem;
+  padding: 1rem;
+  color: #777;
+  font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  #projects {
+    flex-direction: column;
+  }
+
+  #skills ul {
+    grid-template-columns: 1fr;
+  }
+
+  section {
+    margin: 1rem;
+    padding: 1rem;
+  }
+}
+
+/* Vendor Prefixes (Example) */
+input::-webkit-input-placeholder {
+  color: #999;
+}
+input:-moz-placeholder {
+  color: #999;
+}
+input::-moz-placeholder {
+  color: #999;
+}
+input:-ms-input-placeholder {
+  color: #999;
+}
+
+#nav-toggle {
+  display: none;
+  background: none;
+  color: white;
+  font-size: 1.5rem;
+  border: none;
+  cursor: pointer;
+  margin-left: 1rem;
+}
+
+nav ul.visible {
+  display: flex !important;
+}
+
+/* Show toggle on mobile */
+@media (max-width: 768px) {
+  #nav-toggle {
+    display: block;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+}
+
+/* Lightbox */
+#lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+#lightbox.active {
+  display: flex;
+}
+
+#lightbox img {
+  max-width: 90%;
+  max-height: 80%;
+  border: 4px solid white;
+  border-radius: 8px;
+}
+
+/* ...existing code... */
+
+.project-filters {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.filter-button {
+  background: #f5f5f5;
+  color: #222;
+  border: 2px solid #0078d4;
+  border-radius: 25px;
+  padding: 0.5em 1.5em;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  outline: none;
+}
+
+.filter-button:hover,
+.filter-button:focus {
+  background: #0078d4;
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 120, 212, 0.15);
+}
+
+.filter-button.active {
+  background: #222;
+  color: #fff;
+  border-color: #222;
+}
+
+/* ...existing code... */

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A personal portfolio website showcasing my projects, skills, and contact information."
+    />
+    <title>Saeed Adam | Front-End Developer</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Header with navigation -->
+    <header role="banner">
+      <button id="nav-toggle" aria-label="Toggle Navigation">☰</button>
+
+      <nav role="navigation">
+        <ul>
+          <li><a href="#about-me">About Me</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- About Me Section -->
+    <section id="about-me">
+      <h2>About Me</h2>
+      <p>
+        Hi, I'm Saeed Adam, a passionate front-end developer focused on building
+        accessible, performant, and visually appealing websites using HTML, CSS,
+        and JavaScript.
+      </p>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="project-filters">
+        <button class="filter-button" data-category="all">All</button>
+        <button class="filter-button" data-category="web">Web</button>
+        <button class="filter-button" data-category="mobile">Mobile</button>
+      </div>
+      <article>
+        <figure>
+          <img src="images/project1.png" alt="Screenshot of Project 1" />
+          <figcaption>Project One - A modern task management app</figcaption>
+        </figure>
+        <p>
+          This web app allows users to manage tasks efficiently using
+          drag-and-drop and real-time collaboration.
+        </p>
+      </article>
+
+      <article>
+        <figure>
+          <img src="images/project2.png" alt="Screenshot of Project 2" />
+          <figcaption>Project Two - Portfolio website</figcaption>
+        </figure>
+        <p>
+          This responsive portfolio showcases my design and development work,
+          built with accessibility and SEO in mind.
+        </p>
+      </article>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+      <h2>Skills</h2>
+      <ul>
+        <li>HTML5 & Semantic Markup</li>
+        <li>CSS3 & Responsive Design</li>
+        <li>JavaScript (ES6+)</li>
+        <li>Git & GitHub</li>
+        <li>Accessibility (WCAG Standards)</li>
+      </ul>
+    </section>
+
+    <!-- Contact Form -->
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <form action="#" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 Saeed Adam. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
